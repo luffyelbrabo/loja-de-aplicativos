@@ -2,12 +2,52 @@
 <!doctype html>
 <html lang="pt-br">
 
+<link rel="stylesheet" href="styles.css"> <!-- Sua folha de estilo principal -->
+<link rel="stylesheet" href="dark-theme.css"> <!-- Folha de estilo para o tema escuro -->
+
 
 
 
 <head>
 <script> 	
 button.onclick = verifica;
+
+
+<button id="toggle-theme">Alternar Tema</button>
+
+<script>
+  const toggleButton = document.getElementById('toggle-theme');
+  const body = document.body;
+  let darkThemeEnabled = false;
+
+  toggleButton.addEventListener('click', () => {
+    darkThemeEnabled = !darkThemeEnabled;
+
+    if (darkThemeEnabled) {
+      body.classList.add('dark-theme');
+    } else {
+      body.classList.remove('dark-theme');
+    }
+  });
+</script>
+
+
+
+/* Estilize o botão de alternância de tema */
+#toggle-theme {
+  background-color: #333; /* Cor de fundo do botão no tema claro */
+  color: #fff; /* Cor do texto no botão no tema claro */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Adicione estilos específicos para o botão no tema escuro, se necessário */
+.dark-theme #toggle-theme {
+  background-color: #fff; /* Cor de fundo do botão no tema escuro */
+  color: #000; /* Cor do texto no botão no tema escuro */
+}
+
 
 </script>
 <meta charset="utf-8" />
@@ -52,7 +92,7 @@ button.onclick = verifica;
 <div class="row">
 <div class="col-12">
 <div class="page-title-box text-center">
-<h2 class="mb-0">BAIXE UM DE NOSSOS APLICATIVOS ABAIXO</h2>
+<h2 class="mb-0">NOSSOS APLICATIVOS</h2>
 </div>
 </div>
 </div>
