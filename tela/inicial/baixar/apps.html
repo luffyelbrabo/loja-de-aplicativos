@@ -61,13 +61,46 @@ button.onclick = verifica;
     }
 </style>
 
+    <style>
+    /* Estilos para o botão */
+    .botao-topo {
+        display: none; /* Inicialmente, esconda o botão */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.botao-topo').fadeIn();
+            } else {
+                $('.botao-topo').fadeOut();
+            }
+        });
+
+        $('.botao-topo').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+    });
+</script>
+
 <div class="navbar-header" style="height: 90px;">
 <input type="hidden" id="url_downs" value="release/index.html">
 <input type="hidden" id="apps" value="release/index.html">
 <div class="row text-center" style="display:contents;">
 <div class="col-12">
 <h3 class="display-8 text-white"><b>D-NET-VPN LOJA DE APLICATIVOS</h3>
-</div>
+<div id="topo"></div>
 </div>
 </div>
 </header>
@@ -366,12 +399,13 @@ button.onclick = verifica;
 <div class="col-sm-12 mt-5">
 <div class="card text-center mt-3 mb-3" style="border-radius: 3.25rem;">
 <h2 class="mt-5 mb-1">
-<div class="text-dark">APK HOST CLOUD</div>
+<div class="text-dark">D-NET-VPN</div>
 </h2>
 <p class="font-size-16 text-muted mt-3">QUALIDADE+
 Nossos serviços são de alta qualidade, os nossos serviços também são usados e avaliados pela nossa equipe para obter toda garantia e qualidade.</p>
 <div class="row mt-4 mb-5">
 <div class="col-12">
+    <a href="#topo" class="botao-topo">Voltar ao Topo</a>
 </div>
 </div>
 </div>
@@ -383,15 +417,16 @@ Nossos serviços são de alta qualidade, os nossos serviços também são usados
 </div> 
 </div>
 
+
 <footer class="footer">
 <div class="container-fluid">
 <div class="row">
 <div class="col-sm-6">
-<center>2019 - <script> document.write(new Date().getFullYear())</script> © <b><a href="termos.html"></i>Termos de uso</b></a>
+<center>2021 - <script> document.write(new Date().getFullYear())</script> © <b><a href="termos.html"></i>Termos de uso</b></a>
 </div>
 <div class="col-sm-6">
 <div class="text-sm-right d-none d-sm-block">
-Desenvolvido por <a href="https://www.apkhost.me" target="_blank" class="text-reset font-weight-bold">Sr Lourivaldo</a>
+Desenvolvido por <a href="https://t.me/luffyelbrabo" target="_blank" class="text-reset font-weight-bold">D-NET-VPN</a>
 </div>
 </div>
 </div>
