@@ -51,42 +51,24 @@ button.onclick = verifica;
     }
 </style>
 
-
-#voltar-ao-topo {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
+#botao-voltar-ao-topo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#voltar-ao-topo:hover {
-  background-color: #0056b3;
+#botao-voltar-ao-topo:hover {
+    background-color: #0056b3;
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  var voltarAoTopo = document.getElementById("voltar-ao-topo");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY >= 500) { // Defina a posição desejada para exibir o botão
-      voltarAoTopo.style.display = "block";
-    } else {
-      voltarAoTopo.style.display = "none";
-    }
-  });
-
-  voltarAoTopo.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth" // Adiciona um efeito de rolagem suave
-    });
-  });
-});
 
 <div class="navbar-header" style="height: 90px;">
 <input type="hidden" id="url_downs" value="release/index.html">
@@ -94,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="row text-center" style="display:contents;">
 <div class="col-12">
 <h3 class="display-8 text-white"><b>D-NET-VPN QUALIDADE E AQUI™</h3>
+ <div id="topo"></div>
 </div>
 </div>
 </div>
@@ -409,7 +392,8 @@ document.addEventListener("DOMContentLoaded", function () {
 Nossos serviços são de alta qualidade, os nossos serviços também são usados e avaliados pela nossa equipe para obter toda garantia e qualidade.</p>
 <div class="row mt-4 mb-5">
 <div class="col-12">
-<a href="#" id="voltar-ao-topo">Voltar ao Topo</a>
+ <!-- Botão "Voltar ao Topo" -->
+    <a href="#topo" id="botao-voltar-ao-topo">Voltar ao Topo</a>
 </div>
 </div>
 </div>
@@ -474,7 +458,27 @@ Desenvolvido por <a href="https://t.me/luffyelbrabo" target="_blank" class="text
 
         }
 button.onclick = verifica;
+
+
+
+window.addEventListener("scroll", function() {
+    var botaoVoltarAoTopo = document.getElementById("botao-voltar-ao-topo");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        botaoVoltarAoTopo.style.display = "block";
+    } else {
+        botaoVoltarAoTopo.style.display = "none";
+    }
+});
+
+document.getElementById("botao-voltar-ao-topo").addEventListener("click", function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
+
         </script>
+        
 </body>
 
 
