@@ -1,3 +1,38 @@
+
+/* Estilos para a aba de sobreposição */
+.overlay-tab {
+    position: fixed;
+    top: 0;
+    left: -50%; /* A aba começa escondida à esquerda */
+    width: 50%;
+    height: 100%;
+    background-color: #f0f0f0;
+    transition: 0.3s;
+    z-index: 1;
+    overflow-y: auto;
+}
+
+/* Estilos para o conteúdo da aba de sobreposição */
+.overlay-content {
+    padding: 20px;
+}
+
+/* Estilos para o botão de fechar */
+.overlay-content button:last-child {
+    background-color: #ff0000; /* Cor vermelha para o botão de fechar */
+}
+
+/* Estilos para o conteúdo principal do site */
+.main-content {
+    margin-left: 0; /* O conteúdo principal não é deslocado */
+    padding: 20px;
+}
+
+
+
+
+
+
 .menu-tab {
     position: relative;
     display: inline-block;
