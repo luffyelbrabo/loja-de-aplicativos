@@ -1,18 +1,13 @@
-// Verifique se o usuário já escolheu um tema anteriormente
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-theme');
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const openMenuButton = document.getElementById("openMenu");
+    const closeMenuButton = document.getElementById("closeMenu");
+    const popupMenu = document.getElementById("popupMenu");
 
-// Função para alternar entre temas
-function toggleTheme() {
-    if (document.body.classList.contains('dark-theme')) {
-        document.body.classList.remove('dark-theme');
-        localStorage.setItem('theme', 'light');
-    } else {
-        document.body.classList.add('dark-theme');
-        localStorage.setItem('theme', 'dark');
-    }
-}
+    openMenuButton.addEventListener("click", function() {
+        popupMenu.style.display = "block";
+    });
 
-// Ouça o evento de clique no botão ou interruptor de alternância
-document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    closeMenuButton.addEventListener("click", function() {
+        popupMenu.style.display = "none";
+    });
+});
