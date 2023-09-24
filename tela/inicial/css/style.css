@@ -1,76 +1,15 @@
-
-/* Estilos para a aba de sobreposição */
-.overlay-tab {
+#botao-voltar-ao-topo {
+    display: none;
     position: fixed;
-    top: 0;
-    left: -50%; /* A aba começa escondida à esquerda */
-    width: 50%;
-    height: 100%;
-    background-color: #f0f0f0;
-    transition: 0.3s;
-    z-index: 1;
-    overflow-y: auto;
-}
-
-/* Estilos para o conteúdo da aba de sobreposição */
-.overlay-content {
-    padding: 20px;
-}
-
-/* Estilos para o botão de fechar */
-.overlay-content button:last-child {
-    background-color: #ff0000; /* Cor vermelha para o botão de fechar */
-}
-
-/* Estilos para o conteúdo principal do site */
-.main-content {
-    margin-left: 0; /* O conteúdo principal não é deslocado */
-    padding: 20px;
-}
-
-
-
-
-
-
-.menu-tab {
-    position: relative;
-    display: inline-block;
-}
-
-#menu-button {
-    background-color: #333;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.menu-options {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    list-style-type: none;
-    padding: 0;
-}
-
-.menu-options li {
-    border-bottom: 1px solid #ccc;
-}
-
-.menu-options li:last-child {
-    border-bottom: none;
-}
-
-.menu-options a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-    transition: background-color 0.3s;
-}
-
-.menu-options a:hover {
-    background-color: #f2f2f2;
+#botao-voltar-ao-topo:hover {
+    background-color: #0056b3;
 }
