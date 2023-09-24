@@ -80,20 +80,7 @@ button.onclick = verifica;
     
     
     
-window.addEventListener("scroll", function() {
-    var botaoVoltarAoTopo = document.getElementById("botao-voltar-ao-topo");
 
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        botaoVoltarAoTopo.style.display = "block";
-    } else {
-        botaoVoltarAoTopo.style.display = "none";
-    }
-});
-
-document.getElementById("botao-voltar-ao-topo").addEventListener("click", function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
     
     
 </body>
@@ -470,6 +457,22 @@ button.onclick = verifica;
 
 
         </script>
+        
+        
+window.addEventListener("scroll", function() {
+    var botaoVoltarAoTopo = document.getElementById("botao-voltar-ao-topo");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        botaoVoltarAoTopo.style.display = "block";
+    } else {
+        botaoVoltarAoTopo.style.display = "none";
+    }
+});
+
+document.getElementById("botao-voltar-ao-topo").addEventListener("click", function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
         
 </body>
 
