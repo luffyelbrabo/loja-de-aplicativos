@@ -4,9 +4,9 @@
 <!-- Mirrored from apkhost.me/loja01/download/termos.html by HTTrack Website Copier/3.x [XR&CO'2017], Wed, 02 Aug 2023 13:55:00 GMT -->
 <head>
 <script>
-document.getElementById('voltar').addEventListener('click', function() {
+function goBack() {
   window.history.back();
-});
+}
 </script>
 
 
@@ -33,8 +33,9 @@ document.getElementById('voltar').addEventListener('click', function() {
             color: white;  text-decoration: none;
         }
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap');
-        
-        
+
+
+
 #voltar {
   background-color: #007bff; /* Cor de fundo do botão */
   color: #fff; /* Cor do texto */
@@ -46,8 +47,6 @@ document.getElementById('voltar').addEventListener('click', function() {
 #voltar:hover {
   background-color: #0056b3; /* Cor de fundo do botão quando o mouse passa por cima */
 }
-        
-
         </style>
 
 
@@ -73,7 +72,7 @@ document.getElementById('voltar').addEventListener('click', function() {
 • TODA RESPONSABILIDADE DE USO É SUA, NÃO SOMOS RESPONSÁVEL PELA REDE QUE VOCÊ ESTÁ A ACESSAR O SERVIÇO.
 </h4>
 
-<button id="voltar">Voltar</button>
+<button class="voltar" onclick="goBack()">Voltar</button>
         
 <p class="copyright">&copy; 2021 - 2023 <script> document.write(new Date().getFullYear())</script><br> Todos os direitos reservados<br><a title="Styleshout" href="https://t.me/luffyelbrabo">D-NET-VPN</a></p>
 </body>
