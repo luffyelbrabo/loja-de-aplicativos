@@ -85,15 +85,6 @@ button.onclick = verifica;
         border-radius: 5px;
     }
     </style>
-    
-    .popup {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1;
-}
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -122,41 +113,25 @@ button.onclick = verifica;
 <div class="col-12">
 <h3 class="display-8 text-white"><b>BEM VINDO(A) A LOJA DE APLICATIVOS D-NET-VPN</h3>
 <div id="topo"></div>
-
-</head>
+</div>
+</div>
+<div
+<div
+<div
 <body>
-    <button id="menuButton">Menu</button>
+    <button id="openMenu">Abrir Menu</button>
 
-    <!-- Pop-up menu -->
-    <div id="menuPopup" class="popup">
-        <button onclick="window.location.href='url1'">Botão 1</button>
-        <button onclick="window.location.href='url2'">Botão 2</button>
-        <button onclick="window.location.href='url3'">Botão 3</button>
-        <button onclick="window.location.href='url4'">Botão 4</button>
-        <button onclick="window.location.href='url5'">Botão 5</button>
+    <div id="popupMenu" class="menu">
+        <button><a href="pagina1.html">Botão 1</a></button>
+        <button><a href="pagina2.html">Botão 2</a></button>
+        <button><a href="pagina3.html">Botão 3</a></button>
+        <button><a href="pagina4.html">Botão 4</a></button>
+        <button><a href="pagina5.html">Botão 5</a></button>
+        <button id="closeMenu">Fechar Menu</button>
     </div>
 
-    <!-- Seu conteúdo principal aqui -->
-
-    <script>
-        // JavaScript para mostrar/ocultar o pop-up
-        document.getElementById("menuButton").addEventListener("click", function() {
-            var popup = document.getElementById("menuPopup");
-            popup.style.display = "block";
-        });
-
-        // Fechar o pop-up quando clicar fora dele
-        window.addEventListener("click", function(event) {
-            var popup = document.getElementById("menuPopup");
-            if (event.target != popup && event.target != document.getElementById("menuButton")) {
-                popup.style.display = "none";
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-</html>
-
-
 </header>
 
 
