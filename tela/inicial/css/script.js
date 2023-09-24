@@ -1,13 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const openMenuButton = document.getElementById("openMenu");
-    const closeMenuButton = document.getElementById("closeMenu");
-    const popupMenu = document.getElementById("popupMenu");
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menu-button");
+    const menuPopup = document.getElementById("menu-popup");
 
-    openMenuButton.addEventListener("click", function() {
-        popupMenu.style.display = "block";
-    });
-
-    closeMenuButton.addEventListener("click", function() {
-        popupMenu.style.display = "none";
+    menuButton.addEventListener("click", function () {
+        menuPopup.style.display = (menuPopup.style.display === "block") ? "none" : "block";
     });
 });
