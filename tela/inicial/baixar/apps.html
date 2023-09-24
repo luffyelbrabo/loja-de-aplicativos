@@ -51,21 +51,7 @@ button.onclick = verifica;
     }
 </style>
 
-#botao-voltar-ao-topo {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
-#botao-voltar-ao-topo:hover {
-    background-color: #0056b3;
-}
 
 
 
@@ -91,6 +77,25 @@ button.onclick = verifica;
     <h1>Bem-vindo ao Meu Site</h1>
     <p>Veja nosso site parceiro:</p>
     <a href="https://t.me/luffyelbrabo" target="_blank" class="meu-botao">Contato Telegram</a>
+    
+    
+    
+window.addEventListener("scroll", function() {
+    var botaoVoltarAoTopo = document.getElementById("botao-voltar-ao-topo");
+
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        botaoVoltarAoTopo.style.display = "block";
+    } else {
+        botaoVoltarAoTopo.style.display = "none";
+    }
+});
+
+document.getElementById("botao-voltar-ao-topo").addEventListener("click", function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+    
+    
 </body>
 </html>
 
@@ -461,20 +466,7 @@ button.onclick = verifica;
 
 
 
-window.addEventListener("scroll", function() {
-    var botaoVoltarAoTopo = document.getElementById("botao-voltar-ao-topo");
 
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        botaoVoltarAoTopo.style.display = "block";
-    } else {
-        botaoVoltarAoTopo.style.display = "none";
-    }
-});
-
-document.getElementById("botao-voltar-ao-topo").addEventListener("click", function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
 
 
         </script>
