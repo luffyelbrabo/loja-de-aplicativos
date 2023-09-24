@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <!doctype html>
 <html lang="pt-br">
 
@@ -8,7 +8,7 @@
 <head>
 <script> 	
 button.onclick = verifica;
-
+<div id="topo"></div>
 </script>
 <meta charset="utf-8" />
 <title>D-NET-VPN - QUALIDADE E AQUI™</title>
@@ -60,6 +60,40 @@ button.onclick = verifica;
         background-color: #0056b3;
     }
 </style>
+
+
+    style>
+    /* Estilos para o botão */
+    .botao-topo {
+        display: none; /* Inicialmente, esconda o botão */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.botao-topo').fadeIn();
+            } else {
+                $('.botao-topo').fadeOut();
+            }
+        });
+
+        $('.botao-topo').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+    });
+</script>
 
 <div class="navbar-header" style="height: 90px;">
 <input type="hidden" id="url_downs" value="release/index.html">
@@ -366,12 +400,13 @@ button.onclick = verifica;
 <div class="col-sm-12 mt-5">
 <div class="card text-center mt-3 mb-3" style="border-radius: 3.25rem;">
 <h2 class="mt-5 mb-1">
-<div class="text-dark">APK HOST CLOUD</div>
+<div class="text-dark">D-NET-VPN</div>
 </h2>
 <p class="font-size-16 text-muted mt-3">QUALIDADE+
 Nossos serviços são de alta qualidade, os nossos serviços também são usados e avaliados pela nossa equipe para obter toda garantia e qualidade.</p>
 <div class="row mt-4 mb-5">
 <div class="col-12">
+        <a href="#topo" class="botao-topo">Voltar ao Topo</a>
 </div>
 </div>
 </div>
@@ -391,7 +426,7 @@ Nossos serviços são de alta qualidade, os nossos serviços também são usados
 </div>
 <div class="col-sm-6">
 <div class="text-sm-right d-none d-sm-block">
-Desenvolvido por <a href="https://www.apkhost.me" target="_blank" class="text-reset font-weight-bold">Sr Lourivaldo</a>
+Desenvolvido por <a href="https://t.me/luffyelbrabo" target="_blank" class="text-reset font-weight-bold">D-NET-VPN</a>
 </div>
 </div>
 </div>
