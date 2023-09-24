@@ -6,3 +6,38 @@
     padding: 10px;
     z-index: 1;
 }
+
+
+.menu-tab {
+    position: relative;
+    display: inline-block;
+}
+
+#menu-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.menu-popup {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-popup button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu-popup button:hover {
+    background-color: #f2f2f2;
+}
