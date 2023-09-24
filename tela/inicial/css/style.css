@@ -1,11 +1,3 @@
-/* Estilos para o tema escuro */
-body {
-    background-color: #111; /* Cor de fundo escura */
-    color: #fff; /* Cor do texto clara */
-}
-
-
-
 .menu {
     display: none;
     position: absolute;
