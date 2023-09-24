@@ -51,6 +51,43 @@ button.onclick = verifica;
     }
 </style>
 
+
+#voltar-ao-topo {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#voltar-ao-topo:hover {
+  background-color: #0056b3;
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var voltarAoTopo = document.getElementById("voltar-ao-topo");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= 500) { // Defina a posição desejada para exibir o botão
+      voltarAoTopo.style.display = "block";
+    } else {
+      voltarAoTopo.style.display = "none";
+    }
+  });
+
+  voltarAoTopo.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Adiciona um efeito de rolagem suave
+    });
+  });
+});
+
 <div class="navbar-header" style="height: 90px;">
 <input type="hidden" id="url_downs" value="release/index.html">
 <input type="hidden" id="apps" value="release/index.html">
@@ -372,6 +409,7 @@ button.onclick = verifica;
 Nossos serviços são de alta qualidade, os nossos serviços também são usados e avaliados pela nossa equipe para obter toda garantia e qualidade.</p>
 <div class="row mt-4 mb-5">
 <div class="col-12">
+<a href="#" id="voltar-ao-topo">Voltar ao Topo</a>
 </div>
 </div>
 </div>
