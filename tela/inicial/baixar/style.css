@@ -1,0 +1,22 @@
+.menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    top: 50px;
+    left: 50px;
+}
+
+.menu button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#openMenu {
+    cursor: pointer;
+}
+
+#closeMenu {
+    cursor: pointer;
+}
