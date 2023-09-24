@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.getElementById("menu-button");
-    const menuPopup = document.getElementById("menu-popup");
+    const menuOptions = document.getElementById("menu-options");
 
     menuButton.addEventListener("click", function () {
-        menuPopup.style.display = (menuPopup.style.display === "block") ? "none" : "block";
+        if (menuOptions.style.display === "block") {
+            menuOptions.style.display = "none";
+        } else {
+            menuOptions.style.display = "block";
+        }
     });
 });
