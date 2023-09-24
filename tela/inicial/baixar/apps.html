@@ -49,12 +49,29 @@ button.onclick = verifica;
     .meu-botao:hover {
         background-color: #0056b3;
     }
+    
+    
+    
+/* Estilo para o botão "Voltar ao Topo" */
+#btnTopo {
+    display: none; /* Inicialmente, o botão estará oculto */
+    position: fixed; /* Fixa o botão na parte inferior direita da tela */
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnTopo:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse sobre o botão */
+}
+
+
 </style>
-
-
-
-
-
 
 <div class="navbar-header" style="height: 90px;">
 <input type="hidden" id="url_downs" value="release/index.html">
@@ -62,7 +79,6 @@ button.onclick = verifica;
 <div class="row text-center" style="display:contents;">
 <div class="col-12">
 <h3 class="display-8 text-white"><b>D-NET-VPN QUALIDADE E AQUI™</h3>
- <div id="topo"></div>
 </div>
 </div>
 </div>
@@ -77,12 +93,6 @@ button.onclick = verifica;
     <h1>Bem-vindo ao Meu Site</h1>
     <p>Veja nosso site parceiro:</p>
     <a href="https://t.me/luffyelbrabo" target="_blank" class="meu-botao">Contato Telegram</a>
-    
-    
-    
-
-    
-    
 </body>
 </html>
 
@@ -384,8 +394,6 @@ button.onclick = verifica;
 Nossos serviços são de alta qualidade, os nossos serviços também são usados e avaliados pela nossa equipe para obter toda garantia e qualidade.</p>
 <div class="row mt-4 mb-5">
 <div class="col-12">
- <!-- Botão "Voltar ao Topo" -->
-    <a href="#topo" id="botao-voltar-ao-topo">Voltar ao Topo</a>
 </div>
 </div>
 </div>
@@ -401,11 +409,12 @@ Nossos serviços são de alta qualidade, os nossos serviços também são usados
 <div class="container-fluid">
 <div class="row">
 <div class="col-sm-6">
-<center>2019 - <script> document.write(new Date().getFullYear())</script> © <b><a href="termos.html"></i>Termos de uso</b></a>
+<center>2023 - <script> document.write(new Date().getFullYear())</script> © <b><a href="termos.html"></i>Termos de uso</b></a>
 </div>
 <div class="col-sm-6">
 <div class="text-sm-right d-none d-sm-block">
 Desenvolvido por <a href="https://t.me/luffyelbrabo" target="_blank" class="text-reset font-weight-bold">D-NET-VPN</a>
+<button id="btnTopo">Voltar ao Topo</button>
 </div>
 </div>
 </div>
@@ -450,29 +459,24 @@ Desenvolvido por <a href="https://t.me/luffyelbrabo" target="_blank" class="text
 
         }
 button.onclick = verifica;
-
-
-
-
-
-
         </script>
         
-        
-window.addEventListener("scroll", function() {
-    var botaoVoltarAoTopo = document.getElementById("botao-voltar-ao-topo");
+<script>
+    // Função para mostrar/ocultar o botão "Voltar ao Topo"
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("btnTopo").style.display = "block";
+        } else {
+            document.getElementById("btnTopo").style.display = "none";
+        }
+    };
 
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        botaoVoltarAoTopo.style.display = "block";
-    } else {
-        botaoVoltarAoTopo.style.display = "none";
-    }
-});
-
-document.getElementById("botao-voltar-ao-topo").addEventListener("click", function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
+    // Função para rolar suavemente até o topo da página
+    document.getElementById("btnTopo").onclick = function() {
+        document.body.scrollTop = 0; // Para navegadores da web
+        document.documentElement.scrollTop = 0; // Para o Internet Explorer
+    };
+</script>
         
 </body>
 
