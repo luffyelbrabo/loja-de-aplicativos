@@ -70,34 +70,13 @@ button.onclick = verifica;
     background-color: #0056b3; /* Cor de fundo ao passar o mouse sobre o botão */
 }
 
-.menu {
-  width: 250px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: -250px; /* Esconde o menu inicialmente */
-  background-color: #333;
-  color: #fff;
-  transition: left 0.3s;
+#sidebar {
+    display: none;
+    /* Estilize seu menu lateral aqui */
 }
 
-.menu-button {
-  cursor: pointer;
-  padding: 10px;
-}
-
-.menu-list {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-list li {
-  padding: 10px;
-}
-
-.content {
-  margin-left: 250px; /* Aumenta a margem para acomodar o menu */
-  padding: 20px;
+#menuButton {
+    /* Estilize seu botão de menu aqui */
 }
 
 </style>
@@ -128,26 +107,14 @@ button.onclick = verifica;
 <h2 class="mb-0">BAIXE UM DE NOSSOS APLICATIVOS ABAIXO</h2>
 </div>
 </div>
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <div class="menu">
-    <div class="menu-button" id="menuButton">☰ MENU ☰</div>
-    <ul class="menu-list" id="menuList">
-      <li><a href="tutorial.html">Item 1</a></li>
-      <li><a href="termos.html">Item 2</a></li>
-      <li><a href="pagina.html">Item 3</a></li>
-    </ul>
-  </div>
-  <div class="content">
-    <!-- Conteúdo da página -->
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
+<button id="menuButton">MENU</button>
+<div id="sidebar">
+        <ul>
+            <li><a href="pagina1.html">Página 1</a></li>
+            <li><a href="pagina2.html">Página 2</a></li>
+            <li><a href="pagina3.html">Página 3</a></li>
+        </ul>
+    </div>
 </div>
 <div class="row">
 <div class="col-md-3 col-xl-12">
@@ -431,14 +398,19 @@ button.onclick = verifica;
     };
     
     
-    document.getElementById('menuButton').addEventListener('click', function() {
-  const menuList = document.getElementById('menuList');
-  if (menuList.style.display === 'block') {
-    menuList.style.display = 'none';
-  } else {
-    menuList.style.display = 'block';
-  }
+    const menuButton = document.getElementById("menuButton");
+const sidebar = document.getElementById("sidebar");
+
+menuButton.addEventListener("click", () => {
+    if (sidebar.style.display === "none" || sidebar.style.display === "") {
+        sidebar.style.display = "block";
+    } else {
+        sidebar.style.display = "none";
+    }
 });
+
+
+
 </script>
         
 </body>
