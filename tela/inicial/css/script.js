@@ -32,3 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+document.getElementById("openPopup").addEventListener("click", function () {
+    document.getElementById("popupMenu").style.display = "block";
+});
+
+document.getElementById("popupMenu").addEventListener("click", function (e) {
+    if (e.target === document.getElementById("popupMenu")) {
+        document.getElementById("popupMenu").style.display = "none";
+    }
+});
