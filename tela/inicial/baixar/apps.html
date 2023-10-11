@@ -9,12 +9,13 @@
 button.onclick = verifica;
 
 
-document.getElementById("mostrar-menu").addEventListener("click", function() {
-    document.getElementById("menu").style.display = "block";
-});
-
-document.getElementById("fechar-menu").addEventListener("click", function() {
-    document.getElementById("menu").style.display = "none";
+document.getElementById('menu-button').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
 });
 
 </script>
@@ -78,7 +79,7 @@ document.getElementById("fechar-menu").addEventListener("click", function() {
     background-color: #0056b3; /* Cor de fundo ao passar o mouse sobre o botão */
 }
 
-.popup {
+.menu {
     display: none;
     position: fixed;
     top: 0;
@@ -89,13 +90,21 @@ document.getElementById("fechar-menu").addEventListener("click", function() {
     z-index: 1;
 }
 
-#popupContent {
-    background-color: #fff;
-    max-width: 300px;
-    margin: 20% auto;
-    padding: 20px;
-    border-radius: 5px;
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.menu li {
+    margin: 10px 0;
+}
+
+/* Adicione estilos adicionais conforme necessário */
 
 </style>
 
@@ -107,23 +116,9 @@ document.getElementById("fechar-menu").addEventListener("click", function() {
 </div>
 <div
 </div> 
-<div
-    <!-- Seu código CSS e outros meta-dados aqui --> 
+<div 
 </header>
 </head>
-<body>
-    <button id="menu-button">Abrir Menu</button>
-    <div id="menu" class="menu">
-        <ul>
-            <li><a href="#">Item de Menu 1</a></li>
-            <li><a href="#">Item de Menu 2</a></li>
-            <!-- Adicione mais itens de menu conforme necessário -->
-        </ul>
-    </div>
-    <!-- Seu conteúdo principal aqui -->
-</body>
-</html>
-
    
 
     
@@ -139,6 +134,23 @@ document.getElementById("fechar-menu").addEventListener("click", function() {
 <h2 class="mb-0">BAIXE UM DE NOSSOS APLICATIVOS ABAIXO</h2>
 </div>
 </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Seu código CSS e outros meta-dados aqui -->
+</head>
+<body>
+    <button id="menu-button">Abrir Menu</button>
+    <div id="menu" class="menu">
+        <ul>
+            <li><a href="tutorial.html">Item de Menu 1</a></li>
+            <li><a href="termos.html">Item de Menu 2</a></li>
+            <!-- Adicione mais itens de menu conforme necessário -->
+        </ul>
+    </div>
+    <!-- Seu conteúdo principal aqui -->
+</body>
+</html>
 </div>
 <div class="row">
 <div class="col-md-3 col-xl-12">
