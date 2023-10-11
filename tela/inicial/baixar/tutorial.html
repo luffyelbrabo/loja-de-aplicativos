@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Sua Página Personalizada</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="center-content">
-        <h1>Meus Vídeos</h1>
-        <div class="video-link">
-            <h2>Dalsin - Fiquei Com</h2>
-            <a href="https://www.youtube.com/embed/6vCNz5uEROM?si=BXFSnBqmXnz26XAW">Assistir</a>
-        </div>
-        <div class="video-link">
-            <h2>Dalsin -40 Graus</h2>
-            <a href="https://www.youtube.com/embed/xmv5Ujzt1T0?si=UjMOjVIQSr2gDo4Y">Assistir</a>
-            <div class="video-link">
-            <h2>Dalsin pesadelo</h2>
-            <a href="https://www.youtube.com/embed/i9YmiEp3D5E?si=_4X9yew_7BmjZswt">Assistir</a>
-        </div>
-        <div class="video-link">
-            <h2>Dalsin e Froid</h2>
-            <a href="https://www.youtube.com/embed/iKVCiezt42M?si=GaR9RMdSH7Tj7ZLx">Assistir</a>
-        </div>
-        <!-- Adicione mais vídeos, se necessário -->
-        <a href="apps.html" class="voltar">Voltar</a>
-    </div>
+    <!-- Conteúdo da sua página vai aqui -->
+    <div class="video-container">
+    <video class="video" controls>
+        <source src="https://www.youtube.com/embed/6vCNz5uEROM?si=BXFSnBqmXnz26XAW" type="video/mp4">
+    </video>
+    <div class="title">Dalsin - Fiquei Com</div>
+</div>
+
+<div class="video-container">
+    <video class="video" controls>
+        <source src="https://www.youtube.com/embed/xmv5Ujzt1T0?si=UjMOjVIQSr2gDo4Y" type="video/mp4">
+    </video>
+    <div class="title">Dalsin -40 Graus</div>
+</div>
+
+<div class="video-container">
+    <video class="video" controls>
+        <source src="https://www.youtube.com/embed/i9YmiEp3D5E?si=_4X9yew_7BmjZswt" type="video/mp4">
+    </video>
+    <div class="title">Dalsin pesadelo de quem não dorme a dias</div>
+</div>
+
+<div class="video-container">
+    <video class="video" controls>
+        <source src="https://www.youtube.com/embed/iKVCiezt42M?si=GaR9RMdSH7Tj7ZLx" type="video/mp4">
+    </video>
+    <div class="title">Dalsin e Froid</div>
+</div>
+
+
+<button class="back-button" onclick="window.history.back()">Voltar</button>
 </body>
 </html>
