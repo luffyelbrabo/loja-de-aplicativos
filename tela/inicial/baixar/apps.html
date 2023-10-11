@@ -9,15 +9,6 @@
 button.onclick = verifica;
 
 
-document.getElementById('menu-button').addEventListener('click', function() {
-    var menu = document.getElementById('menu');
-    if (menu.style.display === 'none' || menu.style.display === '') {
-        menu.style.display = 'block';
-    } else {
-        menu.style.display = 'none';
-    }
-});
-
 </script>
 <meta charset="utf-8" />
 <title>D-NET-VPN - QUALIDADE E AQUI™</title>
@@ -80,31 +71,34 @@ document.getElementById('menu-button').addEventListener('click', function() {
 }
 
 .menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Esconde o menu inicialmente */
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s;
 }
 
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.menu-button {
+  cursor: pointer;
+  padding: 10px;
 }
 
-.menu li {
-    margin: 10px 0;
+.menu-list {
+  list-style: none;
+  padding: 0;
 }
 
-/* Adicione estilos adicionais conforme necessário */
+.menu-list li {
+  padding: 10px;
+}
+
+.content {
+  margin-left: 250px; /* Aumenta a margem para acomodar o menu */
+  padding: 20px;
+}
 
 </style>
 
@@ -137,18 +131,21 @@ document.getElementById('menu-button').addEventListener('click', function() {
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Seu código CSS e outros meta-dados aqui -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <button id="menu-button">Abrir Menu</button>
-    <div id="menu" class="menu">
-        <ul>
-            <li><a href="tutorial.html">Item de Menu 1</a></li>
-            <li><a href="termos.html">Item de Menu 2</a></li>
-            <!-- Adicione mais itens de menu conforme necessário -->
-        </ul>
-    </div>
-    <!-- Seu conteúdo principal aqui -->
+  <div class="menu">
+    <div class="menu-button" id="menuButton">☰</div>
+    <ul class="menu-list" id="menuList">
+      <li><a href="tutorial.html">Item 1</a></li>
+      <li><a href="termos.html">Item 2</a></li>
+      <li><a href="pagina.html">Item 3</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <!-- Conteúdo da página -->
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
 </div>
@@ -432,6 +429,16 @@ button.onclick = verifica;
         document.body.scrollTop = 0; // Para navegadores da web
         document.documentElement.scrollTop = 0; // Para o Internet Explorer
     };
+    
+    
+    document.getElementById('menuButton').addEventListener('click', function() {
+  const menuList = document.getElementById('menuList');
+  if (menuList.style.display === 'block') {
+    menuList.style.display = 'none';
+  } else {
+    menuList.style.display = 'block';
+  }
+});
 </script>
         
 </body>
