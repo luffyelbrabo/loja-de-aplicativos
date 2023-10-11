@@ -73,21 +73,20 @@ button.onclick = verifica;
 
 #menuButton {
     position: fixed;
-    top: 175px; /* Ajuste a posição vertical desejada */
+    top: 180px; /* Ajuste a posição vertical desejada */
     left: 20px; /* Ajuste a posição horizontal desejada */
     /* Estilize seu botão de menu aqui */
 }
 
 #sidebar {
     position: fixed;
-    top: 180px;
+    top: 180;
     left: -180px; /* Posição inicial fora da tela */
     width: 150px; /* Largura do menu */
     height: 100%;
     background-color: #191970;
     transition: left 0.3s ease; /* Adiciona uma transição suave */
-    z-index: 1;
-    display: none;
+    z-index: 1;    
 }
 
 .menu-card {
@@ -99,18 +98,22 @@ button.onclick = verifica;
 }
 
 .menu-card h3 {
-    font-size: 10px;
-    margin-bottom: 5px;
-}
-
-.menu-card p {
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.menu-card a {
-    text-decoration: none;
-    color: #0077b6;
+.menu-card button {
+    background-color: #191970;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-card ul {
+    list-style: none;
+    padding: 0;
 }
 
 </style>
@@ -141,9 +144,10 @@ button.onclick = verifica;
 <h2 class="mb-0">BAIXE UM DE NOSSOS APLICATIVOS ABAIXO</h2>
 </div>
 </div>
-<div class="menu-card">
-<button  id="menuButton">MENU</button>
 <div id="sidebar">
+    <div class="menu-card">
+        <h3>Menu</h3>
+        <button id="menuButton">Abrir Menu</button>
 
         <ul>
            <p <li><h3>✔️</h3><a href="tutorial.html">TUTORIAIS</a></li></p>
