@@ -8,6 +8,12 @@
 <script> 	
 button.onclick = verifica;
 
+
+document.getElementById('menu-button').addEventListener('click', function() {
+    var menu = document.getElementById('overlay-menu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+});
+
 </script>
 <meta charset="utf-8" />
 <title>D-NET-VPN - QUALIDADE E AQUI™</title>
@@ -116,20 +122,26 @@ button.onclick = verifica;
 <h2 class="mb-0">BAIXE UM DE NOSSOS APLICATIVOS ABAIXO</h2>
 </div>
 </div>
- <!-- Botão para abrir o menu pop-up -->
-    <button id="openPopup">Abrir Menu</button>
-    <!-- Div do menu pop-up -->
-    <div id="popupMenu" class="popup">
-        <div id="popupContent">
-            <!-- Conteúdo do menu pop-up -->
-            <a href="tutorial.html">TUTORIAIS</a>
-            <a href="termos.html">TERMOS DE USO</a>
-            <a href="https://t.me/luffyelbrabo">Contato</a>
-        </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Seu cabeçalho -->
+</head>
+<body>
+    <button id="menu-button">Abrir Menu</button>
+    <div id="overlay-menu">
+        <ul>
+            <li><a href="tutorial.html">Página Inicial</a></li>
+            <li><a href="termos.html">Sobre</a></li>
+            <li><a href="pagina.html">Contato</a></li>
+        </ul>
     </div>
 
-    <!-- JavaScript para controlar o menu pop-up -->
-    <script src="script.js"></script>
+    <!-- Resto do conteúdo do seu site -->
+
+</body>
+</html>
+
 </div>
 <div class="row">
 <div class="col-md-3 col-xl-12">
