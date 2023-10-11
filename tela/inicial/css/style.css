@@ -33,3 +33,28 @@
 .botao-voltar button:hover {
     background-color: #0056b3; /* Cor de fundo quando hover */
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.video {
+    margin: 20px 0;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
