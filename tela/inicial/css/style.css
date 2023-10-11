@@ -44,12 +44,12 @@ header {
 
 /* Estilo para cada vídeo e descrição */
 .video {
-    margin: 20px;
+    margin: 35px;
 }
 
 iframe {
-    width: 100%;
-    height: 315px;
+    width: 150%;
+    height: 330px;
 }
 
 h2 {
