@@ -63,15 +63,7 @@ p {
 }
 
 
-#menu-button {
-    display: block;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-}
-
-#overlay-menu {
+.menu {
     display: none;
     position: fixed;
     top: 0;
@@ -82,23 +74,18 @@ p {
     z-index: 1;
 }
 
-#overlay-menu ul {
+.menu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
 }
 
-#overlay-menu li {
+.menu li {
     margin: 10px 0;
 }
 
-#overlay-menu a {
-    text-decoration: none;
-    color: #333;
-}
+/* Adicione estilos adicionais conforme necessário */

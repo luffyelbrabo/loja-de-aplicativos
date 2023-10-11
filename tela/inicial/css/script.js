@@ -34,12 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.getElementById("openPopup").addEventListener("click", function () {
-    document.getElementById("popupMenu").style.display = "block";
-});
-
-document.getElementById("popupMenu").addEventListener("click", function (e) {
-    if (e.target === document.getElementById("popupMenu")) {
-        document.getElementById("popupMenu").style.display = "none";
+document.getElementById('menu-button').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
     }
 });
