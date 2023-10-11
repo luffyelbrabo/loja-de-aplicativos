@@ -79,8 +79,14 @@ button.onclick = verifica;
 }
 
 #sidebar {
-    display: none;
-    /* Estilize seu menu lateral aqui */
+    position: fixed;
+    top: 0;
+    left: -300px; /* Posição inicial fora da tela */
+    width: 300px; /* Largura do menu */
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease; /* Adiciona uma transição suave */
+    z-index: 1;
 }
 
 .menu-card {
@@ -430,10 +436,10 @@ button.onclick = verifica;
 const sidebar = document.getElementById("sidebar");
 
 menuButton.addEventListener("click", () => {
-    if (sidebar.style.display === "none" || sidebar.style.display === "") {
-        sidebar.style.display = "block";
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-300px"; // Fecha o menu
     } else {
-        sidebar.style.display = "none";
+        sidebar.style.left = "0px"; // Abre o menu
     }
 });
 
