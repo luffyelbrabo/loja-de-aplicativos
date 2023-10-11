@@ -78,8 +78,7 @@ button.onclick = verifica;
     /* Estilize seu botão de menu aqui */
 }
 
-#sidebar {
-    position: fixed;
+#sidebar {        
     top: 180;
     left: -180px; /* Posição inicial fora da tela */
     width: 150px; /* Largura do menu */
@@ -116,6 +115,22 @@ button.onclick = verifica;
     padding: 0;
 }
 
+#closeMenuButton {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição */
+}
+
+#closeMenuButton:hover {
+    background-color: #d9534f; /* Cor de fundo no hover */
+}
+
+
 </style>
 
 <div class="col-12">
@@ -147,7 +162,8 @@ button.onclick = verifica;
 <div id="sidebar">
     <div class="menu-card">
         <h3>Menu</h3>
-        <button id="menuButton">Abrir Menu</button>
+        <button id="menuButton" style="display: none;">Abrir Menu</button>
+        
 
         <ul>
            <p <li><h3>✔️</h3><a href="tutorial.html">TUTORIAIS</a></li></p>
@@ -449,6 +465,22 @@ menuButton.addEventListener("click", () => {
     }
 });
 
+
+
+const openMenuButton = document.getElementById("menuButton");
+const closeMenuButton = document.getElementById("closeMenuButton");
+
+openMenuButton.addEventListener("click", () => {
+    openMenuButton.style.display = "none";
+    closeMenuButton.style.display = "block";
+    // Outras ações para abrir o menu aqui
+});
+
+closeMenuButton.addEventListener("click", () => {
+    closeMenuButton.style.display = "none";
+    openMenuButton.style.display = "block";
+    // Outras ações para fechar o menu aqui
+});
 
 
 </script>
