@@ -98,7 +98,7 @@ button.onclick = verifica;
 }
 
 .menu-card h3 {
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 3px;
 }
 
@@ -116,6 +116,12 @@ button.onclick = verifica;
     padding: 0;
 }
 
+.open-menu-button {
+    position: absolute;
+    top: 10px; /* Ajuste a posição vertical desejada */
+    right: 10px; /* Ajuste a posição horizontal desejada */
+    /* Estilize o botão a seu gosto */
+}
 
 
 </style>
@@ -148,8 +154,7 @@ button.onclick = verifica;
 </div>
 <div id="sidebar">
     <div class="menu-card">
-            
-        <h3><button id="menuButton">Abrir Menu</button></h3>
+          <h3><button id="menuButton" class="open-menu-button">Abrir Menu</button></h3>  
         
 
         <ul>
