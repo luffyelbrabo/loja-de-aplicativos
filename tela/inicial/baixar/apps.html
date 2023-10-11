@@ -9,13 +9,12 @@
 <script> 	
 button.onclick = verifica;
 
-document.getElementById("menuButton").addEventListener("click", function() {
-  var popup = document.getElementById("menuPopup");
-  if (popup.style.display === "block") {
-    popup.style.display = "none";
-  } else {
-    popup.style.display = "block";
-  }
+document.getElementById("openMenu").addEventListener("click", function() {
+  document.getElementById("popupMenu").style.display = "block";
+});
+
+document.getElementById("closeMenu").addEventListener("click", function() {
+  document.getElementById("popupMenu").style.display = "none";
 });
 </script>
 <meta charset="utf-8" />
@@ -89,19 +88,17 @@ document.getElementById("menuButton").addEventListener("click", function() {
 <h3 class="display-8 text-white"><b>D-NET-VPN QUALIDADE E AQUI™</h3>
 </div>
 </div>
-</header>
 <div
-    <title>Meu Site</title>
-</head>
-<body>
-    <h1>Bem-vindo ao Meu Site</h1>  
-    
-<button id="menuButton">Menu</button>
+</header>
+
+   <button id="openMenu">Abrir Menu</button>
+
+<div id="popupMenu">
+  <a href="tutorial.html">Página tutoriais</a>
+  <a href="termos.html">Termos de Uso</a>
+  <a href="https://t.me/luffyelbrabo">Contato Telegram</a>
+  <button id="closeMenu">Fechar Menu</button>
 </div>
-<div id="menuPopup" class="popup">
-  <a href="tutorial.html">PAGINA DE TUTORIAIS</a>
-  <a href="termos.html">TERMOS DE USO</a>
-  <a href="https://t.me/luffyelbrabo">CONTATO TELEGRAM</a>
 </div>
 </div>
 
