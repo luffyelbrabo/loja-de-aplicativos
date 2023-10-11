@@ -9,13 +9,6 @@
 <script> 	
 button.onclick = verifica;
 
-document.getElementById("openMenu").addEventListener("click", function() {
-  document.getElementById("popupMenu").style.display = "block";
-});
-
-document.getElementById("closeMenu").addEventListener("click", function() {
-  document.getElementById("popupMenu").style.display = "none";
-});
 </script>
 <meta charset="utf-8" />
 <title>D-NET-VPN - QUALIDADE E AQUI™</title>
@@ -77,6 +70,24 @@ document.getElementById("closeMenu").addEventListener("click", function() {
     background-color: #0056b3; /* Cor de fundo ao passar o mouse sobre o botão */
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+#popupContent {
+    background-color: #fff;
+    max-width: 300px;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+}
 
 </style>
 
@@ -90,18 +101,18 @@ document.getElementById("closeMenu").addEventListener("click", function() {
 </div>
 <div
 </header>
+<!-- Botão para abrir o menu pop-up -->
+    <button id="openPopup">Abrir Menu</button>
 
-   <button id="openMenu">Abrir Menu</button>
-
-<div id="popupMenu">
-  <a href="tutorial.html">Página tutoriais</a>
-  <a href="termos.html">Termos de Uso</a>
-  <a href="https://t.me/luffyelbrabo">Contato Telegram</a>
-  <button id="closeMenu">Fechar Menu</button>
-</div>
-</div>
-</div>
-
+    <!-- Div do menu pop-up -->
+    <div id="popupMenu" class="popup">
+        <div id="popupContent">
+            <!-- Conteúdo do menu pop-up -->
+            <a href="#">Item de Menu 1</a>
+            <a href="#">Item de Menu 2</a>
+            <a href="#">Item de Menu 3</a>
+        </div>
+    </div>
 <div class="main-content mt-10">
 <div class="page-content">
 <div class="container-fluid">
