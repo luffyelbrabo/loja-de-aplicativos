@@ -9,6 +9,14 @@
 <script> 	
 button.onclick = verifica;
 
+document.getElementById("menuButton").addEventListener("click", function() {
+  var popup = document.getElementById("menuPopup");
+  if (popup.style.display === "block") {
+    popup.style.display = "none";
+  } else {
+    popup.style.display = "block";
+  }
+});
 </script>
 <meta charset="utf-8" />
 <title>D-NET-VPN - QUALIDADE E AQUI™</title>
@@ -81,6 +89,12 @@ button.onclick = verifica;
 <h3 class="display-8 text-white"><b>D-NET-VPN QUALIDADE E AQUI™</h3>
 </div>
 </div>
+<button id="menuButton">Menu</button>
+</div>
+<div id="menuPopup" class="popup">
+  <a href="tutorial.html">PAGINA DE TUTORIAIS</a>
+  <a href="termos.html">TERMOS DE USO</a>
+  <a href="https://t.me/luffyelbrabo">CONTATO TELEGRAM</a>
 </div>
 </header>
 
