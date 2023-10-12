@@ -472,10 +472,11 @@ openMenuButton.addEventListener("click", () => {
     // Outras ações para abrir o menu aqui
 });
 
+const closeMenuButton = document.getElementById("closeMenuButton");
+const sidebar = document.getElementById("sidebar");
+
 closeMenuButton.addEventListener("click", () => {
-    closeMenuButton.style.display = "none";
-    openMenuButton.style.display = "block";
-    // Outras ações para fechar o menu aqui
+    sidebar.classList.add("menu-hidden"); // Adicione a classe para ocultar o menu
 });
 
 
